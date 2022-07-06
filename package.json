@@ -1,0 +1,42 @@
+{
+  "name": "my-lib",
+  "version": "0.0.1",
+  "author": "wangyuanlin <334392345@qq.com>",
+  "description": "A xxx lib.",
+  "main": "./lib/my-lib.umd.js",
+  "module": "./lib/my-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./lib/my-lib.es.js",
+      "require": "./lib/my-lib.umd.js"
+    }
+  },
+  "private": false,
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "dev": "vite --config ./build/docs.config.js",
+    "build:docs": "vite build --config ./build/docs.config.js",
+    "build:lib": "vite build --config ./build/lib.config.js",
+    "preview": "vite preview --config ./build/docs.config.js"
+  },
+  "keywords": [
+    "my",
+    "lib",
+    "library",
+    "vite"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-vue": "^9.2.0",
+    "vite": "^2.9.9",
+    "vite-plugin-eslint": "^1.6.1"
+  }
+}
